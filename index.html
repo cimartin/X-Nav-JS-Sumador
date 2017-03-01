@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Ejercicio 5.5.6 Sumador</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+</head>
+<body>
+<p><span id='operacion'></span><span id='resultado'></span><a href="javascript:sumar()">  quieres saber el resultado</a></p>
+<p><a href="javascript:document.location.reload()">Sumar otros numeros aleatorios</a></p>
+<script type="text/javascript" charset="utf-8" >
+
+
+		    	num1 = Math.round(Math.random()*1000);
+		    	num2 = Math.round(Math.random()*1000);
+	
+			   	function changer (id, newValue) {
+            	var element = document.getElementById(id);
+		    	element.innerHTML = newValue;
+		    	};
+
+
+		    	changer("operacion", num1 + "+" + num2);
+
+
+		    	function sumar(){
+		    		var suma = document.getElementById("operacion");
+		    		var operands = suma.innerHTML.split ("+");
+		    		var res = parseInt(operands[0]) + parseInt(operands[1]);
+		    		changer("resultado", "=" + res);
+		    		
+		    	};
+
+</script>
+
+</body>
+</html>
